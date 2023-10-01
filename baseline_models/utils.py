@@ -3,7 +3,8 @@ import pandas as pd
 import xarray as xr
 from eofs.xarray import Eof
 # data_path = './data/train_val/'
-data_path = "CONFIGURE_ME"
+# data_path = "CONFIGURE_ME" this was how the path set previously
+data_path = "../"
 
 min_co2 = 0.
 max_co2 = 9500
