@@ -18,11 +18,119 @@ The spatial, global and total NRMSE of the different baseline emulators for the 
 
 
 ## Installation
-The example scripts provided here require [ESEm](https://github.com/duncanwp/ESEm) and a few other packages. It is recommended to first create a conda environment with iris or xarray::
+The example scripts provided here require [ESEm](https://github.com/duncanwp/ESEm) and a few other packages. Below the whole process of setting up the environment in described for a standard Ubuntu distribution. Same can be done for other linux variants with equivalent commands.
 
-    $ conda install -c conda-forge iris
 
-Then pip install the additional requirements:
+1.   First upgrade your linux environment using the following command:  
+```
+sudo apt update
+```
 
-    $ pip install esem[gpflow,keras,scikit-learn] eofs
+2.   Make sure that python3 is present in your local environment by typing the following command:
+```
+python3 --version
+```
+In case its not available install python3 using the following command:
+```
+sudo apt-get install python3
+```
+3. Make sure pip is installed on your system by using the following command:
+```
+pip --version
+```
+In case it is not available download it using the following command:
+```
+sudo apt-get install python3-pip
+```
 
+### Conda Installation
+Follow the instructions on the official conda page to install conda. It can be found [here](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
+
+Or you can follow the following commandline steps:
+
+
+
+*   Download the Miniconda installer for Linux:
+```
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+```
+*  Make the installer script executable:
+```
+chmod +x Miniconda3-latest-Linux-x86_64.sh
+```
+
+
+
+*   Run the installer script:
+```
+./Miniconda3-latest-Linux-x86_64.sh
+```
+
+*   After the installation completes, either open a new terminal or source your .bashrc (or the appropriate shell configuration file) to ensure the conda command is available:
+```
+source ~/.bashrc
+```
+
+*   Verify the installation by checking the version of Conda:
+```
+conda --version
+```
+
+###Cloning the repository
+*   Clone the repository using the following command:
+```
+git clone https://github.com/pthak006/ClimateBench.git
+```
+
+###Setting up Conda Environment
+
+
+*   Change the directory to the ClimateBench repository using the command
+```
+cd ClimateBench
+```
+*   Create the conda environment using the following command:
+```
+conda env create -f environment.yml
+```
+*   Make Sure conda environment called newenv is now present in the local environment by using the following command:
+```
+conda env list
+```
+*   Activate the newenv conda environment using the following command:
+```
+conda activate newenv
+```
+
+###Downloading the datasets:
+*  Download the train and validation datasets using the following command:
+```
+wget https://zenodo.org/record/7064308/files/train_val.tar.gz?download=1 -O train_val.tar.gz
+```
+* Extract the train and validation datasets using the following command:
+```
+tar -xzvf train_val.tar.gz
+```
+* Download the test dataset using the following command:
+```
+wget https://zenodo.org/record/7064308/files/test.tar.gz?download=1 -O test.tar.gz
+```
+* Extract the test dataset using the following command:
+```
+tar -xzvf test.tar.gz
+```
+* Download the CMIP6 datasets using the following comand:
+```
+wget https://zenodo.org/record/7064308/files/CMIP6.zip?download=1 -O CMIP6.zip
+```
+* Extract the CMIP6 datasets using the following command:
+```
+unzip CMIP6.zip
+```
+* In case unzip is not present in the environment use the following command to install it:
+```
+sudo apt-get install unzip
+```
+
+
+After doing all the operatins finally the emulator notebooks present in the baseline_models folder can be run and their outputs can be used to run the notebooks present in the analysis_notebooks.
