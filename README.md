@@ -1,14 +1,14 @@
 # ClimateBench
 
-ClimateBench is a benchmark dataset for climate model emulation inspired by [WeatherBench](https://github.com/pangeo-data/WeatherBench). It consists of NorESM2 simulation outputs with associated forcing data processed in to a consistent format from a variety of experiments performed for CMIP6. Multiple ensemble members are included where available. 
+ClimateBench is a benchmark dataset for climate model emulation inspired by [WeatherBench](https://github.com/pangeo-data/WeatherBench). It consists of NorESM2 simulation outputs with associated forcing data processed into a consistent format from a variety of experiments performed for CMIP6. Multiple ensemble members are included where available. 
 
-The processed training, validation and test data can be obtained from Zenodo: [10.5281/zenodo.5196512](https://doi.org/10.5281/zenodo.5196512).
+The processed training, validation, and test data can be obtained from Zenodo: [10.5281/zenodo.5196512](https://doi.org/10.5281/zenodo.5196512).
 
-A pre-print of the paper describing ClimateBench and the baseline models can be found here: <https://www.essoar.org/doi/10.1002/essoar.10509765.2>
+A preprint of the paper describing ClimateBench and the baseline models can be found here: <https://www.essoar.org/doi/10.1002/essoar.10509765.2>
 
 ## Leaderboard
 
-The spatial, global and total NRMSE of the different baseline emulators for the years 2080-2100 against the ClimateBench task of estimating key climate variables under future scenario SSP245. The models  are ranked in order of the mean of the total NRMSE across all tasks. 
+The spatial, global, and total NRMSE of the different baseline emulators for the years 2080-2100 against the ClimateBench task of estimating key climate variables under future scenario SSP245. The models  are ranked in order of the mean of the total NRMSE across all tasks. 
 
 |                  |   ('tas', 'Spatial') |   ('tas', 'Global') |   ('tas', 'Total') |   ('diurnal_temperature_range', 'Spatial') |   ('diurnal_temperature_range', 'Global') |   ('diurnal_temperature_range', 'Total') |   ('pr', 'Spatial') |   ('pr', 'Global') |   ('pr', 'Total') |   ('pr90', 'Spatial') |   ('pr90', 'Global') |   ('pr90', 'Total') |
 |------------------|----------------------|---------------------|--------------------|--------------------------------------------|-------------------------------------------|------------------------------------------|---------------------|--------------------|-------------------|-----------------------|----------------------|---------------------|
@@ -18,10 +18,10 @@ The spatial, global and total NRMSE of the different baseline emulators for the 
 
 
 ## Installation
-The example scripts provided here require [ESEm](https://github.com/duncanwp/ESEm) and a few other packages. Below the whole process of setting up the environment in described for a standard Ubuntu distribution. Same can be done for other linux variants with equivalent commands.
+The example scripts provided here require [ESEm](https://github.com/duncanwp/ESEm) and a few other packages. Below is the whole process of setting up the environment described for a standard Ubuntu distribution. The same can be done for other Linux variants with equivalent commands.
 
 
-1.   First upgrade your linux environment using the following command:  
+1.   First upgrade your Linux environment using the following command:  
 ```
 sudo apt update
 ```
@@ -30,7 +30,7 @@ sudo apt update
 ```
 python3 --version
 ```
-In case its not available install python3 using the following command:
+In case it's not available install python3 using the following command:
 ```
 sudo apt-get install python3
 ```
@@ -46,7 +46,7 @@ sudo apt-get install python3-pip
 ### Conda Installation
 Follow the instructions on the official conda page to install conda. It can be found [here](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
 
-Or you can follow the following commandline steps:
+Or you can follow the following command line steps:
 
 
 
@@ -93,7 +93,7 @@ cd ClimateBench
 ```
 conda env create -f environment.yml
 ```
-*   Make Sure conda environment called newenv is now present in the local environment by using the following command:
+*   Make Sure the conda environment called newenv is now present in the local environment by using the following command:
 ```
 conda env list
 ```
@@ -119,7 +119,7 @@ wget https://zenodo.org/record/7064308/files/test.tar.gz?download=1 -O test.tar.
 ```
 tar -xzvf test.tar.gz
 ```
-* Download the CMIP6 datasets using the following comand:
+* Download the CMIP6 datasets using the following command:
 ```
 wget https://zenodo.org/record/7064308/files/CMIP6.zip?download=1 -O CMIP6.zip
 ```
@@ -133,4 +133,4 @@ sudo apt-get install unzip
 ```
 
 
-After doing all the operatins finally the emulator notebooks present in the baseline_models folder can be run and their outputs can be used to run the notebooks present in the analysis_notebooks.
+After doing all the operations finally the emulator notebooks present in the baseline_models folder can be run and their outputs can be used to run the notebooks present in the analysis_notebooks.
