@@ -1,0 +1,209 @@
+.
+├── analysis_notebooks
+│   ├── CMIP6_scores.ipynb
+│   ├── Figure_1.pdf
+│   ├── Figure_2.pdf
+│   ├── Figure_3.pdf
+│   ├── Figure_4.pdf
+│   ├── Figure_6.pdf
+│   ├── Figure_A1.pdf
+│   ├── Figure_A2.pdf
+│   ├── GP_CRPS.ipynb
+│   └── paper_figures.ipynb
+├── baseline_models
+│   ├── ClimateBenchGP_dtr.ipynb
+│   ├── ClimateBenchGP.ipynb
+│   ├── climatebench-gp-posterior-mean-dtr-test-2019-2100.nc
+│   ├── climatebench-gp-posterior-mean-pr90-test-2019-2100.nc
+│   ├── climatebench-gp-posterior-mean-pr-test-2019-2100.nc
+│   ├── climatebench-gp-posterior-mean-tas-test-2019-2100.nc
+│   ├── climatebench-gp-posterior-std-dtr-test-2019-2100.nc
+│   ├── climatebench-gp-posterior-std-pr90-test-2019-2100.nc
+│   ├── climatebench-gp-posterior-std-pr-test-2019-2100.nc
+│   ├── climatebench-gp-posterior-std-tas-test-2019-2100.nc
+│   ├── ClimateBenchGP_pr90.ipynb
+│   ├── ClimateBenchGP_pr.ipynb
+│   ├── ClimateBenchGP_tas.ipynb
+│   ├── CNN-LTSM_model.ipynb
+│   ├── __init__.py
+│   ├── Original_RF_model.ipynb
+│   ├── output_path
+│   │   └── output.nc
+│   ├── outputs_ssp245_prediction_ESEm.nc
+│   ├── pattern_scaling_model.ipynb
+│   ├── __pycache__
+│   │   └── utils.cpython-310.pyc
+│   ├── RF_model_ESEm.ipynb
+│   ├── simple_GP_model.ipynb
+│   ├── utils.py
+│   └── wget-log
+├── CMIP6
+│   ├── pr_Ayr_ACCESS-CM2_piControl_r1i1p1f1_gn_1115-1200.nc
+│   ├── pr_Ayr_ACCESS-CM2_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── pr_Ayr_BCC-CSM2-MR_piControl_r1i1p1f1_gn_2021-2106.nc
+│   ├── pr_Ayr_BCC-CSM2-MR_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── pr_Ayr_CanESM5_piControl_r1i1p1f1_gn_5366-5451.nc
+│   ├── pr_Ayr_CanESM5_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── pr_Ayr_CESM2_piControl_r1i1p1f1_gn_1006-1091.nc
+│   ├── pr_Ayr_CESM2_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── pr_Ayr_CESM2-WACCM_piControl_r1i1p1f1_gn_0221-0306.nc
+│   ├── pr_Ayr_CESM2-WACCM_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── pr_Ayr_CMCC-CM2-SR5_piControl_r1i1p1f1_gn_2015-2100.nc
+│   ├── pr_Ayr_CMCC-CM2-SR5_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── pr_Ayr_CNRM-CM6-1-HR_piControl_r1i1p1f2_gr_2015-2100.nc
+│   ├── pr_Ayr_CNRM-CM6-1-HR_ssp245_r1i1p1f2_gr_2015-2100.nc
+│   ├── pr_Ayr_CNRM-CM6-1_piControl_r1i1p1f2_gr_2015-2100.nc
+│   ├── pr_Ayr_CNRM-CM6-1_ssp245_r1i1p1f2_gr_2015-2100.nc
+│   ├── pr_Ayr_CNRM-ESM2-1_piControl_r1i1p1f2_gr_2015-2100.nc
+│   ├── pr_Ayr_CNRM-ESM2-1_ssp245_r1i1p1f2_gr_2015-2100.nc
+│   ├── pr_Ayr_EC-Earth3_piControl_r1i1p1f1_gr_2425-2510.nc
+│   ├── pr_Ayr_EC-Earth3_ssp245_r1i1p1f1_gr_2015-2100.nc
+│   ├── pr_Ayr_EC-Earth3-Veg_piControl_r1i1p1f1_gr_2195-2280.nc
+│   ├── pr_Ayr_EC-Earth3-Veg_ssp245_r1i1p1f1_gr_2015-2100.nc
+│   ├── pr_Ayr_FGOALS-g3_piControl_r1i1p1f1_gn_0535-0620.nc
+│   ├── pr_Ayr_FGOALS-g3_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── pr_Ayr_HadGEM3-GC31-LL_piControl_r1i1p1f1_gn_2015-2100.nc
+│   ├── pr_Ayr_HadGEM3-GC31-LL_ssp245_r1i1p1f3_gn_2015-2100.nc
+│   ├── pr_Ayr_INM-CM4-8_piControl_r1i1p1f1_gr1_2112-2197.nc
+│   ├── pr_Ayr_INM-CM4-8_ssp245_r1i1p1f1_gr1_2015-2100.nc
+│   ├── pr_Ayr_INM-CM5-0_piControl_r1i1p1f1_gr1_2264-2349.nc
+│   ├── pr_Ayr_INM-CM5-0_ssp245_r1i1p1f1_gr1_2015-2100.nc
+│   ├── pr_Ayr_MCM-UA-1-0_piControl_r1i1p1f1_gn_0166-0251.nc
+│   ├── pr_Ayr_MCM-UA-1-0_ssp245_r1i1p1f2_gn_2015-2100.nc
+│   ├── pr_Ayr_MIROC6_piControl_r1i1p1f1_gn_3365-3450.nc
+│   ├── pr_Ayr_MIROC6_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── pr_Ayr_MIROC-ES2L_piControl_r1i1p1f2_gn_2015-2100.nc
+│   ├── pr_Ayr_MIROC-ES2L_ssp245_r1i1p1f2_gn_2015-2100.nc
+│   ├── pr_Ayr_MPI-ESM1-2-LR_piControl_r1i1p1f1_gn_2015-2100.nc
+│   ├── pr_Ayr_MPI-ESM1-2-LR_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── pr_Ayr_MRI-ESM2-0_piControl_r1i1p1f1_gn_2015-2100.nc
+│   ├── pr_Ayr_MRI-ESM2-0_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── pr_Ayr_NorESM2-LM_piControl_r1i1p1f1_gn_1765-1850.nc
+│   ├── pr_Ayr_NorESM2-LM_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── pr_Ayr_NorESM2-MM_piControl_r1i1p1f1_gn_1366-1451.nc
+│   ├── pr_Ayr_NorESM2-MM_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── tas_Ayr_ACCESS-CM2_piControl_r1i1p1f1_gn_1115-1200.nc
+│   ├── tas_Ayr_ACCESS-CM2_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── tas_Ayr_BCC-CSM2-MR_piControl_r1i1p1f1_gn_2021-2106.nc
+│   ├── tas_Ayr_BCC-CSM2-MR_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── tas_Ayr_CanESM5_piControl_r1i1p1f1_gn_5366-5451.nc
+│   ├── tas_Ayr_CanESM5_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── tas_Ayr_CESM2_piControl_r1i1p1f1_gn_1006-1091.nc
+│   ├── tas_Ayr_CESM2_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── tas_Ayr_CESM2-WACCM_piControl_r1i1p1f1_gn_0221-0306.nc
+│   ├── tas_Ayr_CESM2-WACCM_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── tas_Ayr_CMCC-CM2-SR5_piControl_r1i1p1f1_gn_2015-2100.nc
+│   ├── tas_Ayr_CMCC-CM2-SR5_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── tas_Ayr_CNRM-CM6-1-HR_piControl_r1i1p1f2_gr_2015-2100.nc
+│   ├── tas_Ayr_CNRM-CM6-1-HR_ssp245_r1i1p1f2_gr_2015-2100.nc
+│   ├── tas_Ayr_CNRM-CM6-1_piControl_r1i1p1f2_gr_2015-2100.nc
+│   ├── tas_Ayr_CNRM-CM6-1_ssp245_r1i1p1f2_gr_2015-2100.nc
+│   ├── tas_Ayr_CNRM-ESM2-1_piControl_r1i1p1f2_gr_2015-2100.nc
+│   ├── tas_Ayr_CNRM-ESM2-1_ssp245_r1i1p1f2_gr_2015-2100.nc
+│   ├── tas_Ayr_EC-Earth3_piControl_r1i1p1f1_gr_2425-2510.nc
+│   ├── tas_Ayr_EC-Earth3_ssp245_r1i1p1f1_gr_2015-2100.nc
+│   ├── tas_Ayr_EC-Earth3-Veg_piControl_r1i1p1f1_gr_2195-2280.nc
+│   ├── tas_Ayr_EC-Earth3-Veg_ssp245_r1i1p1f1_gr_2015-2100.nc
+│   ├── tas_Ayr_FGOALS-g3_piControl_r1i1p1f1_gn_0535-0620.nc
+│   ├── tas_Ayr_FGOALS-g3_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── tas_Ayr_HadGEM3-GC31-LL_piControl_r1i1p1f1_gn_2015-2100.nc
+│   ├── tas_Ayr_HadGEM3-GC31-LL_ssp245_r1i1p1f3_gn_2015-2100.nc
+│   ├── tas_Ayr_INM-CM4-8_piControl_r1i1p1f1_gr1_2112-2197.nc
+│   ├── tas_Ayr_INM-CM4-8_ssp245_r1i1p1f1_gr1_2015-2100.nc
+│   ├── tas_Ayr_INM-CM5-0_piControl_r1i1p1f1_gr1_2264-2349.nc
+│   ├── tas_Ayr_INM-CM5-0_ssp245_r1i1p1f1_gr1_2015-2100.nc
+│   ├── tas_Ayr_MCM-UA-1-0_piControl_r1i1p1f1_gn_0166-0251.nc
+│   ├── tas_Ayr_MCM-UA-1-0_ssp245_r1i1p1f2_gn_2015-2100.nc
+│   ├── tas_Ayr_MIROC6_piControl_r1i1p1f1_gn_3365-3450.nc
+│   ├── tas_Ayr_MIROC6_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── tas_Ayr_MIROC-ES2L_piControl_r1i1p1f2_gn_2015-2100.nc
+│   ├── tas_Ayr_MIROC-ES2L_ssp245_r1i1p1f2_gn_2015-2100.nc
+│   ├── tas_Ayr_MPI-ESM1-2-LR_piControl_r1i1p1f1_gn_2015-2100.nc
+│   ├── tas_Ayr_MPI-ESM1-2-LR_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── tas_Ayr_MRI-ESM2-0_piControl_r1i1p1f1_gn_2015-2100.nc
+│   ├── tas_Ayr_MRI-ESM2-0_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── tas_Ayr_NorESM2-LM_piControl_r1i1p1f1_gn_1765-1850.nc
+│   ├── tas_Ayr_NorESM2-LM_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── tas_Ayr_NorESM2-MM_piControl_r1i1p1f1_gn_1366-1451.nc
+│   ├── tas_Ayr_NorESM2-MM_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── tasmax_Ayr_BCC-CSM2-MR_piControl_r1i1p1f1_gn_2021-2106.nc
+│   ├── tasmax_Ayr_BCC-CSM2-MR_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── tasmax_Ayr_CanESM5-CanOE_piControl_r1i1p2f1_gn_5715-5800.nc
+│   ├── tasmax_Ayr_CanESM5-CanOE_ssp245_r1i1p2f1_gn_2015-2100.nc
+│   ├── tasmax_Ayr_CanESM5_piControl_r1i1p2f1_gn_5715-5800.nc
+│   ├── tasmax_Ayr_CanESM5_ssp245_r1i1p2f1_gn_2015-2100.nc
+│   ├── tasmax_Ayr_FGOALS-g3_piControl_r1i1p1f1_gn_0535-0620.nc
+│   ├── tasmax_Ayr_FGOALS-g3_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── tasmax_Ayr_GISS-E2-1-G_piControl_r1i1p3f1_gn_2165-2250.nc
+│   ├── tasmax_Ayr_GISS-E2-1-G_ssp245_r1i1p3f1_gn_2015-2100.nc
+│   ├── tasmax_Ayr_MIROC6_piControl_r1i1p1f1_gn_3365-3450.nc
+│   ├── tasmax_Ayr_MIROC6_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── tasmax_Ayr_MIROC-ES2L_piControl_r1i1p1f2_gn_2015-2100.nc
+│   ├── tasmax_Ayr_MIROC-ES2L_ssp245_r1i1p1f2_gn_2015-2100.nc
+│   ├── tasmax_Ayr_MRI-ESM2-0_piControl_r1i1p1f1_gn_2015-2100.nc
+│   ├── tasmax_Ayr_MRI-ESM2-0_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── tasmax_Ayr_NorESM2-LM_piControl_r1i1p1f1_gn_1765-1850.nc
+│   ├── tasmax_Ayr_NorESM2-LM_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── tasmax_Ayr_NorESM2-MM_piControl_r1i1p1f1_gn_1366-1451.nc
+│   ├── tasmax_Ayr_NorESM2-MM_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── tasmin_Ayr_BCC-CSM2-MR_piControl_r1i1p1f1_gn_2021-2106.nc
+│   ├── tasmin_Ayr_BCC-CSM2-MR_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── tasmin_Ayr_CanESM5-CanOE_piControl_r1i1p2f1_gn_5715-5800.nc
+│   ├── tasmin_Ayr_CanESM5-CanOE_ssp245_r1i1p2f1_gn_2015-2100.nc
+│   ├── tasmin_Ayr_CanESM5_piControl_r1i1p2f1_gn_5715-5800.nc
+│   ├── tasmin_Ayr_CanESM5_ssp245_r1i1p2f1_gn_2015-2100.nc
+│   ├── tasmin_Ayr_FGOALS-g3_piControl_r1i1p1f1_gn_0535-0620.nc
+│   ├── tasmin_Ayr_FGOALS-g3_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── tasmin_Ayr_GISS-E2-1-G_piControl_r1i1p3f1_gn_2165-2250.nc
+│   ├── tasmin_Ayr_GISS-E2-1-G_ssp245_r1i1p3f1_gn_2015-2100.nc
+│   ├── tasmin_Ayr_MIROC6_piControl_r1i1p1f1_gn_3365-3450.nc
+│   ├── tasmin_Ayr_MIROC6_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── tasmin_Ayr_MIROC-ES2L_piControl_r1i1p1f2_gn_2015-2100.nc
+│   ├── tasmin_Ayr_MIROC-ES2L_ssp245_r1i1p1f2_gn_2015-2100.nc
+│   ├── tasmin_Ayr_MRI-ESM2-0_piControl_r1i1p1f1_gn_2015-2100.nc
+│   ├── tasmin_Ayr_MRI-ESM2-0_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── tasmin_Ayr_NorESM2-LM_piControl_r1i1p1f1_gn_1765-1850.nc
+│   ├── tasmin_Ayr_NorESM2-LM_ssp245_r1i1p1f1_gn_2015-2100.nc
+│   ├── tasmin_Ayr_NorESM2-MM_piControl_r1i1p1f1_gn_1366-1451.nc
+│   └── tasmin_Ayr_NorESM2-MM_ssp245_r1i1p1f1_gn_2015-2100.nc
+├── CMIP6.zip
+├── directory_structure.txt
+├── environment.yml
+├── inputs_1pctCO2.nc
+├── inputs_abrupt-4xCO2.nc
+├── inputs_hist-aer.nc
+├── inputs_hist-GHG.nc
+├── inputs_historical.nc
+├── inputs_NorESM2_ERF.csv
+├── inputs_ssp126.nc
+├── inputs_ssp245.nc
+├── inputs_ssp370-lowNTCF.nc
+├── inputs_ssp370.nc
+├── inputs_ssp585.nc
+├── LICENSE
+├── __MACOSX
+│   └── CMIP6
+├── NorESM2-LM_historical_r1i1p1f1.nc
+├── outputs_1pctCO2.nc
+├── outputs_abrupt-4xCO2.nc
+├── outputs_hist-aer.nc
+├── outputs_hist-GHG.nc
+├── outputs_historical.nc
+├── outputs_piControl.nc
+├── outputs_ssp126.nc
+├── outputs_ssp245.nc
+├── outputs_ssp245_predict_dtr.nc
+├── outputs_ssp245_prediction_pattern2.nc
+├── outputs_ssp245_predict_pr90.nc
+├── outputs_ssp245_predict_pr.nc
+├── outputs_ssp245_predict_tas.nc
+├── outputs_ssp370-lowNTCF.nc
+├── outputs_ssp370.nc
+├── outputs_ssp585.nc
+├── prepare_data.py
+├── prep_input_data.ipynb
+├── README.md
+├── test.tar.gz
+└── train_val.tar.gz
+
+7 directories, 199 files
