@@ -161,7 +161,17 @@ For ease of use, ClimateBench can be run using Docker, which simplifies the setu
    ```
 
    This command starts a container and provides you with an interactive terminal inside it.
+   
+3. **Activate the conda environment and run jupyter notebook**
 
-3. **Accessing ClimateBench**
+   After running the image, you have to first acitvate the conda environment. Run:
+   ```bash
+   conda activate newenv
+   ```
 
-   Once inside the Docker container, you'll have access to the ClimateBench environment with all the necessary dependencies and datasets pre-loaded. You can navigate to the `baseline_models` folder to run the emulator notebooks and use the outputs to run the notebooks present in the `analysis_notebooks` folder.
+   After that jupyter notebook can be started. 
+
+
+4. **Accessing ClimateBench**
+
+   Once this is done you'll have access to the ClimateBench environment with all the necessary dependencies and datasets pre-loaded. You can navigate to the `baseline_models` folder to run the emulator notebooks and use the outputs to run the notebooks present in the `analysis_notebooks` folder.
