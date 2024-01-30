@@ -134,3 +134,51 @@ sudo apt-get install unzip
 
 
 After doing all the operations finally the emulator notebooks present in the baseline_models folder can be run and their outputs can be used to run the notebooks present in the analysis_notebooks.
+
+## Using Docker to Run ClimateBench
+
+For ease of use, ClimateBench can be run using Docker, which simplifies the setup process. This method avoids the need for manual installation and configuration.
+
+### Prerequisites
+- Docker installed on your system. For installation instructions, visit the [Docker website](https://docs.docker.com/get-docker/).
+
+### Running ClimateBench with Docker
+
+1. **Pull the ClimateBench Docker Image**
+   
+   Pull the Docker image from Docker Hub using the following command:
+
+
+2. **Run the ClimateBench Docker Container**
+
+After pulling the image, you can start a container with the ClimateBench environment. Run:
+
+
+## Using Docker to Run ClimateBench
+
+For ease of use, ClimateBench can be run using Docker, which simplifies the setup process. This method avoids the need for manual installation and configuration.
+
+### Prerequisites
+- Docker installed on your system. For installation instructions, visit the [Docker website](https://docs.docker.com/get-docker/).
+
+### Running ClimateBench with Docker
+
+1. **Pull the ClimateBench Docker Image**
+   
+   Pull the Docker image from Docker Hub using the following command:
+   ```bash
+   docker pull pthak006/climatebench
+   ```
+
+2. **Run the ClimateBench Docker Container**
+
+   After pulling the image, you can start a container with the ClimateBench environment. Run:
+   ```bash
+   docker run -it pthak006/climatebench
+   ```
+
+   This command starts a container and provides you with an interactive terminal inside it.
+
+3. **Accessing ClimateBench**
+
+   Once inside the Docker container, you'll have access to the ClimateBench environment with all the necessary dependencies and datasets pre-loaded. You can navigate to the `baseline_models` folder to run the emulator notebooks and use the outputs to run the notebooks present in the `analysis_notebooks` folder.
