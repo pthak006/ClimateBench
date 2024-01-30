@@ -136,6 +136,14 @@ sudo apt-get install unzip
 After doing all the operations finally the emulator notebooks present in the baseline_models folder can be run and their outputs can be used to run the notebooks present in the analysis_notebooks.
 
 
+
+## Using Docker to Run ClimateBench
+
+For ease of use, ClimateBench can be run using Docker, which simplifies the setup process. This method avoids the need for manual installation and configuration.
+
+### Prerequisites
+- Docker installed on your system. For installation instructions, visit the [Docker website](https://docs.docker.com/get-docker/).
+
 ### Running ClimateBench with Docker
 
 1. **Pull the ClimateBench Docker Image**
