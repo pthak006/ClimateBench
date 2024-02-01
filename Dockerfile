@@ -16,9 +16,6 @@ COPY environment.yml .
 # Create the conda environment
 RUN conda env create -f environment.yml
 
-# Activate the conda environment
-SHELL ["conda", "run", "-n", "newenv", "/bin/bash", "-c"]
-
 # Download and extract datasets
 RUN wget https://zenodo.org/record/7064308/files/train_val.tar.gz?download=1 -O train_val.tar.gz && \
     tar -xzvf train_val.tar.gz && \
@@ -27,5 +24,17 @@ RUN wget https://zenodo.org/record/7064308/files/train_val.tar.gz?download=1 -O 
     wget https://zenodo.org/record/7064308/files/CMIP6.zip?download=1 -O CMIP6.zip && \
     unzip CMIP6.zip
 
+# Create and set appropriate permissions for the output directory
+RUN mkdir -p /ClimateBench/baseline_models/output_path && \
+    chmod -R 777 /ClimateBench/baseline_models/output_path
+
+# Create a non-root user 'myuser' with no password
+# 'myuser' will be used to run commands inside the container
+RUN useradd -m myuser
+
+# Switch to 'myuser'
+USER myuser
+
 # Set the default command to run when starting the container
-CMD [ "conda", "run", "-n", "newenv", "/bin/bash" ]
+# Ensure that the 'conda' environment is activated when starting the container
+CMD ["conda", "run", "-n", "newenv", "/bin/bash"]
