@@ -159,6 +159,11 @@ For ease of use, ClimateBench can be run using Docker, which simplifies the setu
    ```bash
    docker run -it pthak006/climatebench
    ```
+   If you are running the docker container inside a remote server or a cloud infrastructure like google cloud then port forwarding is needed.In that case run the following command:
+   ```bash
+   ddocker run -it -p 8888:8888 --platform linux/amd64 pthak006/climatebench /bin/bash
+   ```
+   Sometimes you might need to run the above command with root priviledge that is with sudo prefix in order for it to work. 
 
    This command starts a container and provides you with an interactive terminal inside it.
    
@@ -169,9 +174,18 @@ For ease of use, ClimateBench can be run using Docker, which simplifies the setu
    conda activate newenv
    ```
 
-   After that jupyter notebook can be started. 
+   After that jupyter notebook can be started. Simple command to start jupyter notebook is the following:
 
+   ```bash
+   jupyter notebbok
+   ```
+   However if you are running it inside a remote environment or cloud infrastructure then run the command with port forwarding and if it is run with root priviledge then add the allow-root flag. This can be acheived by running the following command:
 
+   ```bash
+   jupyter notebook --ip 0.0.0.0 --port 8888 --allow-root
+   ```   
+
+   Once jupyter client starts running copy the url link that is one starting with https:127.0.0.... and paste it in your browseer. The project can be now run inside the jupyter environment. 
 4. **Accessing ClimateBench**
 
    Once this is done you'll have access to the ClimateBench environment with all the necessary dependencies and datasets pre-loaded. You can navigate to the `baseline_models` folder to run the emulator notebooks and use the outputs to run the notebooks present in the `analysis_notebooks` folder.
